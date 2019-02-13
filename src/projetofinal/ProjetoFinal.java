@@ -15,33 +15,58 @@ public class ProjetoFinal {
     
     public static void MenuConcessionario(){
      int pedido;  
-     System.out.println( "========== Barraca de Lanches ==========" ) ;  
-	        System.out.println( "Menu de lanches: " ) ;  
-	        System.out.println( "1 - X-Bacon" ) ;  
-	        System.out.println( "2 - X-Salada" ) ;  
-	        System.out.println( "3 - X-Picanha" ) ;  
-	        System.out.println( "4 - X-Tudo: Preço" ) ;  
+     System.out.println( "========== Menu de Concessionário ==========" ) ;  
+	        System.out.println( "1 - Listar Vendedores: " ) ;  
+	        System.out.println( "2 - Listar Viaturas" ) ;  
+	        System.out.println( "3 - Transferir Carros"); 
 	  
 	        Scanner captura = new Scanner( System.in ) ;  
-	        System.out.println( "Digite o número do seu lanche: " ) ;  
+	        System.out.println( "Escolha uma opção:") ;  
 	        pedido = captura.nextInt( ) ;  
 	  
 	        switch ( pedido ) {  
 	            case 1:  
-	                System.out.println( "Você escolheu X-Bacon" ) ;  
-	                System.out.println( "O preço do X-Bacon é: $ 20" ) ;  
+	                System.out.println( "Lista de Vendedores" ) ;  
+	                System.out.println( "Listagem dos vendedores!" ) ;  
 	                break ;  
 	            case 2:  
-	                System.out.println( "Você escolheu X-Salada" ) ;  
-	                System.out.println( "O preço do X-Salada é: $ 15" ) ;  
+	                System.out.println( "Lista de Viaturas" ) ;  
+	                System.out.println( "Info cliente!!!" ) ;  
 	                break ;  
 	            case 3:  
-	                System.out.println( "Você escolheu X-Picanha" ) ;  
-	                System.out.println( "O preço do X-Picanha é: $ 22" ) ;  
+	                System.out.println( "Transferir Carros" ) ;  
+	                System.out.println( "Carros transferidos!" ) ;  
 	                break ;  
-	            case 4:  
-	                System.out.println( "Você escolheu X-Tudo" ) ;  
-	                System.out.println( "O preço do X-Tudo é: $ 30" ) ;  
+	            default:  
+	                System.out.println( "Erro! Número não existe no menu!" ) ;  
+	                break ;  
+	        }  
+	    }  
+    public static void escolherConcessionario(){
+                int pedido;  
+                System.out.println( "========== Menu de Concessionário ==========" ) ;  
+	        System.out.println( "1 - Distrito 1: " ) ;  
+	        System.out.println( "2 - Distrito 2:" ) ;  
+	        System.out.println( "3 - Distrito 3:"); 
+                System.out.println( "4 - Distrito 4:"); 
+                System.out.println( "5 - Distrito 4:");
+	  
+	        Scanner captura = new Scanner( System.in ) ;  
+	        System.out.println( "Escolha uma opção:") ;  
+	        pedido = captura.nextInt( ) ;  
+	  
+	        switch ( pedido ) {  
+	            case 1:  
+	                System.out.println( "Lista de Vendedores" ) ;  
+	                System.out.println( "Listagem dos vendedores!" ) ;  
+	                break ;  
+	            case 2:  
+	                System.out.println( "Lista de Viaturas" ) ;  
+	                System.out.println( "Info cliente!!!" ) ;  
+	                break ;  
+	            case 3:  
+	                System.out.println( "Transferir Carros" ) ;  
+	                System.out.println( "Carros transferidos!" ) ;  
 	                break ;  
 	            default:  
 	                System.out.println( "Erro! Número não existe no menu!" ) ;  
