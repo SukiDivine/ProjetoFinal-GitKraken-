@@ -71,16 +71,13 @@ public class ProjetoFinal {
 	  
 	        switch ( pedido ) {  
 	            case 1:  
-	                System.out.println( "Menu Concessionário" ) ;  
-	                System.out.println( "Info concessionario!!!" ) ;  
+                        escolherConcessionario();
 	                break ;  
 	            case 2:  
-	                System.out.println( "Menu Cliente" ) ;  
-	                System.out.println( "Info cliente!!!" ) ;  
+	                menuCliente();  
 	                break ;  
 	            case 3:  
 	                System.out.println( "Gravar dadinhos" ) ;  
-	                System.out.println( "Dados gravadinhos" ) ;  
 	                break ;  
 	            case 4:  
 	                System.out.println( "Carregar Dados" ) ;  
