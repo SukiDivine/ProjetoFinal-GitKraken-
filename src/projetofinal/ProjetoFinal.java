@@ -5,6 +5,7 @@
  */
 package projetofinal;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
@@ -13,9 +14,9 @@ import java.util.Scanner;
  */
 public class ProjetoFinal {
     
-    public static void MenuConcessionario(){
+    public static void MenuConcessionario( String distritozinho ){
      int pedido;  
-     System.out.println( "========== Menu de Concessionário ==========" ) ;  
+     System.out.println( "========== Menu de Concessionário de " + distritozinho + " ==========" ) ;  
 	        System.out.println( "1 - Listar Vendedores: " ) ;  
 	        System.out.println( "2 - Listar Viaturas" ) ;  
 	        System.out.println( "3 - Transferir Carros"); 
@@ -27,7 +28,7 @@ public class ProjetoFinal {
 	        switch ( pedido ) {  
 	            case 1:  
 	                System.out.println( "Lista de Vendedores" ) ;  
-	                System.out.println( "Listagem dos vendedores!" ) ;  
+	                System.out.println( "Listagem dos vendedores!" ) ;
 	                break ;  
 	            case 2:  
 	                System.out.println( "Lista de Viaturas" ) ;  
@@ -40,25 +41,42 @@ public class ProjetoFinal {
 	            default:  
 	                System.out.println( "Erro! Número não existe no menu!" ) ;  
 	                break ;  
+                    
 	        }  
 	    }  
     public static void escolherConcessionario(){
                 int pedido;  
-                System.out.println( "========== Menu de Concessionário ==========" ) ;  
-	        System.out.println( "1 - Distrito 1: " ) ;  
-	        System.out.println( "2 - Distrito 2:" ) ;  
-	        System.out.println( "3 - Distrito 3:"); 
-                System.out.println( "4 - Distrito 4:"); 
-                System.out.println( "5 - Distrito 4:");
-	  
+                ArrayList<String>distritos= new ArrayList<String>();
+                distritos.add("Aveiro");
+                distritos.add("Beja");
+                distritos.add("Braga");
+                distritos.add("Bragança");
+                distritos.add("Castelo Branco");
+                distritos.add("Coimbra");
+                distritos.add("Évora");
+                distritos.add("Faro");
+                distritos.add("Guarda");
+                distritos.add("Leiria");
+                distritos.add("Lisboa");
+                distritos.add("Portalegre");
+                distritos.add("Porto");
+                distritos.add("Santarém");
+                distritos.add("Setúbal");
+                distritos.add("Viana do Castelo");
+                distritos.add("Vila Real");
+                distritos.add("Viseu");
+                
+                
 	        Scanner captura = new Scanner( System.in ) ;  
-	        System.out.println( "Escolha uma opção:") ;  
+                System.out.println( "Seja bem vindo, escolha um dos distritos: "+ distritos ) ;
+	        System.out.println( "Escolha uma distrito de 1 a 18:") ;  
 	        pedido = captura.nextInt( ) ;  
 	  
 	        switch ( pedido ) {  
-	            case 1:  
-	                System.out.println( "Lista de Vendedores" ) ;  
-	                System.out.println( "Listagem dos vendedores!" ) ;  
+	            case 1: 
+                       int tratamento=pedido-1;
+	                System.out.println( "Escolheu o distrito de :" + distritos.get(tratamento)) ;  
+	                MenuConcessionario(distritos.get(tratamento));
 	                break ;  
 	            case 2:  
 	                System.out.println( "Lista de Viaturas" ) ;  
@@ -73,6 +91,15 @@ public class ProjetoFinal {
 	                break ;  
 	        }  
 	    }  
+    
+    
+    public static void menuCliente(){
+            
+            System.out.println("=========| Registo de Cliente |=========" ); 
+            System.out.println( "Escolha uma opção:" ) ;  
+	    System.out.println( "1 - Registo" ) ; 
+            System.out.println( "2 - Fazer Test-Drive" ) ;
+        }
     
     
     
@@ -81,23 +108,23 @@ public class ProjetoFinal {
            
     int pedido;  
 	  //Criação do menu principal, com as diferentes opções:
-    
+          do{
 	        System.out.println( "=========| Bem vindo à aplicação de gestão de viaturas!! |=========" ) ;  
 	        System.out.println( "Escolha uma opção:" ) ;  
 	        System.out.println( "1 - Menu Concessionário" ) ;  
 	        System.out.println( "2 - Menu Cliente" ) ;  
 	        System.out.println( "3 - Gravar dados em ficheiro externo" ) ;  
 	        System.out.println( "4 - Carregar Dados;" ) ; 
-                System.out.println( "5 - Fechar Programa;" ) ;
+                System.out.println( "0 - Fechar Programa;" ) ;
 	  
 	        Scanner captura = new Scanner( System.in ) ;  
 	        System.out.println( "Escolha uma opção:" ) ;  
 	        pedido = captura.nextInt( ) ;  
 	  
-	        switch ( pedido ) {  
+	        switch ( pedido ) {
+                    
 	            case 1:  
-	                System.out.println( "Menu Concessionário" ) ;  
-	                System.out.println( "Info concessionario!!!" ) ;  
+                        escolherConcessionario(); 
 	                break ;  
 	            case 2:  
 	                System.out.println( "Menu Cliente" ) ;  
@@ -112,15 +139,17 @@ public class ProjetoFinal {
 	                System.out.println( "Dados carregadinhos" ) ;  
 	                break ;  
                     
-                    case 5:  
+                    case 0:  
 	                System.out.println( "Fechar Programa" ) ;  
 	                System.out.println( "Programa fechado" ) ;  
 	                break ;
-                            
+                    
+                        
 	            default:  
 	                System.out.println( "Erro! Número não existe no menu!" ) ;  
 	                break ;  
 	        }  
-	    }  
+	    } while(pedido!=0);
+          }
     }
     
