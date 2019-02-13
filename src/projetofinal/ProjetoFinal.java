@@ -20,7 +20,8 @@ public class ProjetoFinal {
     public static void main(String[] args) {
            
     int pedido;  
-	  
+	  //Criação do menu principal, com as diferentes opções:
+    
 	        System.out.println( "=========| Bem vindo à aplicação de gestão de viaturas!! |=========" ) ;  
 	        System.out.println( "Escolha uma opção:" ) ;  
 	        System.out.println( "1 - Menu Concessionário" ) ;  
@@ -30,7 +31,7 @@ public class ProjetoFinal {
                 System.out.println( "5 - Fechar Programa;" ) ;
 	  
 	        Scanner captura = new Scanner( System.in ) ;  
-	        System.out.println( "Digite o número do seu lanche: " ) ;  
+	        System.out.println( "Escolha uma opção:" ) ;  
 	        pedido = captura.nextInt( ) ;  
 	  
 	        switch ( pedido ) {  
@@ -39,17 +40,23 @@ public class ProjetoFinal {
 	                System.out.println( "Info concessionario!!!" ) ;  
 	                break ;  
 	            case 2:  
-	                System.out.println( "Você escolheu X-Salada" ) ;  
-	                System.out.println( "O preço do X-Salada é: $ 15" ) ;  
+	                System.out.println( "Menu Cliente" ) ;  
+	                System.out.println( "Info cliente!!!" ) ;  
 	                break ;  
 	            case 3:  
-	                System.out.println( "Você escolheu X-Picanha" ) ;  
-	                System.out.println( "O preço do X-Picanha é: $ 22" ) ;  
+	                System.out.println( "Gravar dadinhos" ) ;  
+	                System.out.println( "Dados gravadinhos" ) ;  
 	                break ;  
 	            case 4:  
-	                System.out.println( "Você escolheu X-Tudo" ) ;  
-	                System.out.println( "O preço do X-Tudo é: $ 30" ) ;  
+	                System.out.println( "Carregar Dados" ) ;  
+	                System.out.println( "Dados carregadinhos" ) ;  
 	                break ;  
+                    
+                    case 5:  
+	                System.out.println( "Fechar Programa" ) ;  
+	                System.out.println( "Programa fechado" ) ;  
+	                break ;
+                            
 	            default:  
 	                System.out.println( "Erro! Número não existe no menu!" ) ;  
 	                break ;  
