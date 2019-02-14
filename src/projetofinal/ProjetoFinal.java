@@ -14,9 +14,9 @@ import java.util.Scanner;
  */
 public class ProjetoFinal {
     
-    public static void MenuConcessionario( String distritozinho ){
+    public static void MenuConcessionario( String distrito1 ){
      int pedido;  
-     System.out.println( "========== Menu de Concessionário de " + distritozinho + " ==========" ) ;  
+     System.out.println( "========== Menu de Concessionário de " + distrito1 + " ==========" ) ;  
 	        System.out.println( "1 - Listar Vendedores: " ) ;  
 	        System.out.println( "2 - Listar Viaturas" ) ;  
 	        System.out.println( "3 - Transferir Carros"); 
@@ -95,7 +95,7 @@ public class ProjetoFinal {
     
     public static void menuCliente(){
             
-            System.out.println("=========| Registo de Cliente |=========" ); 
+            System.out.println("=========| Menu Cliente |=========" ); 
             System.out.println( "Escolha uma opção:" ) ;  
 	    System.out.println( "1 - Registo" ) ; 
             System.out.println( "2 - Fazer Test-Drive" ) ;
