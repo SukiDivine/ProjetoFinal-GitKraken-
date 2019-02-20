@@ -16,6 +16,18 @@ public class Pessoa {
     private String morada=null;
     private int numero=0;
     
+    public Pessoa() {
+        
+       this.nome=null;
+       this.morada=null;
+       this.numero=0;   
+    }
+
+    public Pessoa(String nome, String morada, int numero) {
+        this.nome = nome;
+        this.morada = morada;
+        this.numero = numero;
+    }
     
     
 //getters e setters
